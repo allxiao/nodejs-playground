@@ -2,8 +2,12 @@
   "name": "nodejs-playground",
   "version": "1.0.0",
   "description": "Project for studying Node JS and related technologies\"",
-  "main": "main.js",
+  "main": "build/main.js",
   "scripts": {
+    "build": "npx tsc",
+    "clean": "npx tsc --build --clean",
+    "clean-build": "npx tsc --build --clean && npx tsc",
+    "start": "npx ts-node src/main.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,6 +21,8 @@
   },
   "homepage": "https://github.com/allxiao/nodejs-playground#readme",
   "devDependencies": {
+    "@types/node": "^20.4.10",
+    "ts-node": "^10.9.1",
     "typescript": "^5.1.6"
   }
 }
